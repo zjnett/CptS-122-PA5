@@ -1,3 +1,11 @@
+/*
+Programmer: Zach Nett
+Class: CptS 122; Lab Section 5
+Programming Assignment: PA5
+File: main.cpp
+Description: This program simulates 2 queue-based grocery store lines.
+*/
+
 #include "PA5.h"
 #include "Queue.h"
 #include "Tests.h"
@@ -15,6 +23,14 @@ int main(void) {
     return 0;
 }
 
+// runSimulation(), runs grocery store simulation with various counters and two queues according to problem specification.
+/* SPECIFICATION:
+1. Generate a random number between 1 – 5 and 3 – 8 for express and normal lanes, respectively. This represents the arrival time of the first customer into each lane. Set the variable for total time elapsed to 0.
+2. As customers arrive into each line, randomly generate a service time for each. Start processing the customers in the lanes based on service time. Randomly generate the arrival time of the next customer into each line. Elapsed time should be updated by one unit.
+3. As each minute elapses, a new customer may arrive and/or another customer may be done checking out. Display the appropriate messages as described above.
+4. For every 10 minutes, print out the entire queue for each line
+Repeat steps 2 through 4 for n minutes of simulation.
+*/
 void runSimulation(int numMinutes) {
 	int totalTimeElapsed = 0;
 	int customerCount = 1;
@@ -106,11 +122,3 @@ void runSimulation(int numMinutes) {
 		expressFrontTimer--;
 	}
 }
-
-/*
-1. Generate a random number between 1 – 5 and 3 – 8 for express and normal lanes, respectively. This represents the arrival time of the first customer into each lane. Set the variable for total time elapsed to 0.
-2. As customers arrive into each line, randomly generate a service time for each. Start processing the customers in the lanes based on service time. Randomly generate the arrival time of the next customer into each line. Elapsed time should be updated by one unit.
-3. As each minute elapses, a new customer may arrive and/or another customer may be done checking out. Display the appropriate messages as described above.
-4. For every 10 minutes, print out the entire queue for each line
-Repeat steps 2 through 4 for n minutes of simulation.
-*/

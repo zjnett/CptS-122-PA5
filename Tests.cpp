@@ -1,5 +1,14 @@
+/*
+Programmer: Zach Nett
+Class: CptS 122; Lab Section 5
+Programming Assignment: PA5
+File: Tests.cpp
+Description: This program simulates 2 queue-based grocery store lines.
+*/
+
 #include "Tests.h"
 
+// Function runTests(), test wrapper for test functions
 void Tests::runTests(void) {
     testEnqueueEmpty();
     testEnqueueOneNode();
@@ -8,6 +17,7 @@ void Tests::runTests(void) {
     runSim24Hours();
 }
 
+// testEnqueueEmpty(), tests enqueue() function on empty queue
 void Tests::testEnqueueEmpty(void) {
 	std::cout << "Testing Enqueue on Empty Queue:" << std::endl;
 	Queue empty;
@@ -22,6 +32,7 @@ void Tests::testEnqueueEmpty(void) {
 	}
 }
 
+// testEnqueueOneNode(), tests enqueue() function on a queue with one node
 void Tests::testEnqueueOneNode(void) {
 	std::cout << "Testing Enqueue One Node:" << std::endl;
 	Queue oneNode;
@@ -38,6 +49,7 @@ void Tests::testEnqueueOneNode(void) {
 	}
 }
 
+// testDequeueOneNode(), tests dequeue() function on a queue with one node
 void Tests::testDequeueOneNode(void) {
 	std::cout << "Testing Dequeue One Node:" << std::endl;
 	Queue q;
@@ -53,6 +65,7 @@ void Tests::testDequeueOneNode(void) {
 	}
 }
 
+// testDequeueTwoNodes(), tests dequeue() function on a queue with two nodes
 void Tests::testDequeueTwoNodes(void) {
 	std::cout << "Testing Dequeue Two Nodes:" << std::endl;
 	Queue q;
@@ -71,6 +84,7 @@ void Tests::testDequeueTwoNodes(void) {
 	}
 }
 
+// runSim24Hours(), uses runSimuation() function defined in PA5.h to run the simulation for 24 hours
 void Tests::runSim24Hours(void) {
 	std::cout << "BEGINNING 24 HOUR SIMULATION:" << std::endl;
 	system("pause");
