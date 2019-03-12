@@ -1,3 +1,5 @@
+#pragma once
+
 #include "PA5.h"
 
 class Data {
@@ -8,6 +10,13 @@ public:
     Data(int _customerNumber, int _serviceTime, int _totalTime) : customerNumber(_customerNumber), serviceTime(_serviceTime), totalTime(_totalTime) {}
     // Copy Constructor
     Data(Data &old) : customerNumber(old.customerNumber), serviceTime(old.serviceTime), totalTime(old.totalTime) {}
+
+	int getCustomerNumber(void);
+
+	int getServiceTime(void);
+
+	int getTotalTime(void);
+
 private:
     int customerNumber;
     int serviceTime;

@@ -2,5 +2,8 @@
 
 #include <iostream>
 #include <string>
+#include <time.h>
 
-void printSupermarket(void);
+#define MIN_IN_HOUR 60
+
+void runSimulation(int numMinutes);
