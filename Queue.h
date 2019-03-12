@@ -12,4 +12,4 @@ public:
 private:
     QueueNode *pHead;
     QueueNode *pTail;
-}
+};

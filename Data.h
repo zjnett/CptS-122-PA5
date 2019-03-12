@@ -7,7 +7,7 @@ public:
     // Value Constructor
     Data(int _customerNumber, int _serviceTime, int _totalTime) : customerNumber(_customerNumber), serviceTime(_serviceTime), totalTime(_totalTime) {}
     // Copy Constructor
-    Data(Data &old) : customerNumber(old.customerNumber), serviceTime(old.serviceTime), serviceTime(old.totalTime) {}
+    Data(Data &old) : customerNumber(old.customerNumber), serviceTime(old.serviceTime), totalTime(old.totalTime) {}
 private:
     int customerNumber;
     int serviceTime;
